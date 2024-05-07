@@ -14,9 +14,7 @@
    freeimage,
    ace,
    embree,
-   tbb,
    rPackages,
-   python3,
    libGLU,
    xorg,
    libstdcxx5,
@@ -26,15 +24,19 @@
    ncurses5,
    python311Packages,
    gdbm,
-   readline,
+   tbb_2021_11,
    tcllib,
-   tk,
+   tk-8_5,
    openssl_1_1,
    cudaPackages,
-   libxcrypt-legacy
+   linuxKernel,
+   python39Full,
+   libxcrypt-legacy,
+   wlroots,
+   lib
 }:
 let
-  buildInputs = [ libsForQt5.qt5.qtwayland libsForQt5.qt3d libsForQt5.qt5.qtquickcontrols2 libsForQt5.full libxcrypt-legacy glibc gcc-unwrapped xorg.libXrandr xorg.libXrender xorg.libSM xorg.libICE xorg.libX11 xorg.libXext python311Packages.gssapi libz libGL opencolorio alembic freeimage ace embree rPackages.libbib python3 libGLU libstdcxx5 libxml2 libxcrypt harfbuzz ncurses5 gdbm readline cudaPackages.cudatoolkit tcllib tk openssl_1_1 tbb libsForQt5.qt5.qtbase ];
+  buildInputs = [ libsForQt5.qt5.qtwayland libsForQt5.qt3d libsForQt5.qt5.qtquickcontrols2 libsForQt5.full libxcrypt-legacy glibc gcc-unwrapped xorg.libXrandr xorg.libXrender xorg.libSM xorg.libICE xorg.libX11 xorg.libXext python311Packages.gssapi libz libGL opencolorio alembic freeimage ace embree rPackages.libbib libGLU libstdcxx5 libxml2 libxcrypt harfbuzz ncurses5 gdbm cudaPackages.cudatoolkit tcllib  openssl_1_1 libsForQt5.qt5.qtbase tk-8_5 libsForQt5.qtquick3d libsForQt5.qtpurchasing libsForQt5.qtscxml libsForQt5.qtremoteobjects tbb_2021_11 linuxKernel.packages.linux_zen.nvidia_x11_legacy470 wlroots python39Full  ];
   nativeBuildInputs = [ autoPatchelfHook rpm cpio libsForQt5.wrapQtAppsHook ];
   
   src = 
