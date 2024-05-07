@@ -1,1 +1,1 @@
-    My derivations for nix application
+    My derivations for nix applications
